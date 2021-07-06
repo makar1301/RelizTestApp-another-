@@ -1,24 +1,229 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Menu-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="RelizTestApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Menu" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n82-CI-DkL">
+                                <rect key="frame" x="24" y="54" width="367" height="24"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="24" id="y1E-tM-c0L"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="NotoSansMyanmar-Regular" family="Noto Sans Myanmar" pointSize="24"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xHt-P1-07D">
+                                <rect key="frame" x="24" y="756" width="367" height="56"/>
+                                <color key="backgroundColor" red="0.53725490196078429" green="0.59215686274509804" blue="0.95686274509803915" alpha="0.84705882352941175" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="56" id="EXW-2K-5h6"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="NotoSansMyanmar-Regular" family="Noto Sans Myanmar" pointSize="17"/>
+                                <state key="normal" title="Screen 1 Pop-Up">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <integer key="value" value="28"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="screen1PopUpButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="WU3-da-Sa5"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="24c-QJ-xe4">
+                                <rect key="frame" x="24" y="684" width="367" height="56"/>
+                                <color key="backgroundColor" red="0.53725490200000003" green="0.59215686270000001" blue="0.95686274510000002" alpha="0.84705882349999995" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="56" id="9PZ-wr-lnV"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="56" id="YJ1-4z-cdL"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="NotoSansMyanmar-Regular" family="Noto Sans Myanmar" pointSize="17"/>
+                                <state key="normal" title="Screen 1">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <integer key="value" value="28"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="screen1Button:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ryb-u8-fhe"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="xHt-P1-07D" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="24" id="21f-6b-ziD"/>
+                            <constraint firstItem="n82-CI-DkL" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="10" id="3uC-9S-nZW"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="xHt-P1-07D" secondAttribute="trailing" constant="23" id="E5x-1A-LhV"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="n82-CI-DkL" secondAttribute="trailing" constant="23" id="WmZ-0w-EjP"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="xHt-P1-07D" secondAttribute="bottom" constant="50" id="a82-tU-Vby"/>
+                            <constraint firstItem="xHt-P1-07D" firstAttribute="top" secondItem="24c-QJ-xe4" secondAttribute="bottom" constant="16" id="hco-wH-92D"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="24c-QJ-xe4" secondAttribute="trailing" constant="23" id="j2A-6T-RhK"/>
+                            <constraint firstItem="24c-QJ-xe4" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="24" id="nTc-sz-QiM"/>
+                            <constraint firstItem="n82-CI-DkL" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="24" id="vRp-9X-yit"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="Menu" largeTitleDisplayMode="always" id="m8Q-OB-uPN"/>
+                    <connections>
+                        <outlet property="menuTitle" destination="n82-CI-DkL" id="GWe-Ex-Fgi"/>
+                        <segue destination="slg-J6-YfO" kind="presentation" identifier="ModalSegue" modalPresentationStyle="fullScreen" modalTransitionStyle="coverVertical" id="6e0-ga-aMg"/>
+                        <segue destination="slg-J6-YfO" kind="popoverPresentation" identifier="PopUpSegue" popoverAnchorView="8bC-Xf-vdC" id="N6e-RA-17D">
+                            <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
+                        </segue>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="345" y="9"/>
+        </scene>
+        <!--Present View Controller-->
+        <scene sceneID="Z2i-iy-yac">
+            <objects>
+                <viewController id="slg-J6-YfO" customClass="PresentViewController" customModule="RelizTestApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="LJn-rO-xm2">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I6D-1v-deA">
+                                <rect key="frame" x="177.5" y="10" width="59" height="24"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="24" id="j8S-mK-tVL"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="NotoSansMyanmar-Regular" family="Noto Sans Myanmar" pointSize="24"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XOj-Sy-CFe">
+                                <rect key="frame" x="33" y="12" width="12" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="12.119999999999999" id="N33-8P-OPP"/>
+                                    <constraint firstAttribute="height" constant="20" id="fjF-JO-JRP"/>
+                                </constraints>
+                                <color key="tintColor" red="0.53725490200000003" green="0.59215686270000001" blue="0.95686274510000002" alpha="0.84705882349999995" colorSpace="calibratedRGB"/>
+                                <state key="normal">
+                                    <color key="titleColor" red="0.53725490196078429" green="0.59215686274509804" blue="0.95686274509803915" alpha="0.84705882352941175" colorSpace="calibratedRGB"/>
+                                    <imageReference key="image" image="chevron.left" catalog="system" symbolScale="large" renderingMode="template"/>
+                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="large" weight="medium"/>
+                                </state>
+                                <connections>
+                                    <action selector="backButton:" destination="slg-J6-YfO" eventType="touchUpInside" id="UMb-Vf-57E"/>
+                                </connections>
+                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="k3t-H9-nQZ">
+                                <rect key="frame" x="24" y="558" width="367" height="200"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H4f-kc-MF7">
+                                        <rect key="frame" x="0.0" y="0.0" width="367" height="56"/>
+                                        <color key="backgroundColor" red="0.53725490200000003" green="0.59215686270000001" blue="0.95686274510000002" alpha="0.84705882349999995" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="56" id="cLF-l9-cmu"/>
+                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="56" id="h01-ik-xys"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="NotoSansMyanmar-Regular" family="Noto Sans Myanmar" pointSize="17"/>
+                                        <state key="normal" title="Screen 1">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <integer key="value" value="28"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="firstButton:" destination="slg-J6-YfO" eventType="touchUpInside" id="sKe-Oe-NrW"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RhW-Pu-hOC">
+                                        <rect key="frame" x="0.0" y="72" width="367" height="56"/>
+                                        <color key="backgroundColor" red="0.53725490200000003" green="0.59215686270000001" blue="0.95686274510000002" alpha="0.84705882349999995" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="56" id="9Lt-Eh-7qr"/>
+                                            <constraint firstAttribute="height" constant="56" id="Rc0-wJ-LKZ"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="NotoSansMyanmar-Regular" family="Noto Sans Myanmar" pointSize="17"/>
+                                        <state key="normal" title="Screen 1">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <integer key="value" value="28"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="secondButton:" destination="slg-J6-YfO" eventType="touchUpInside" id="920-jZ-gtX"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tuY-zf-81f">
+                                        <rect key="frame" x="0.0" y="144" width="367" height="56"/>
+                                        <color key="backgroundColor" red="0.53725490200000003" green="0.59215686270000001" blue="0.95686274510000002" alpha="0.84705882349999995" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="56" id="SNc-Oa-Ct8"/>
+                                            <constraint firstAttribute="height" constant="56" id="iCe-Zc-Mfy"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="NotoSansMyanmar-Regular" family="Noto Sans Myanmar" pointSize="17"/>
+                                        <state key="normal" title="Screen 1">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <integer key="value" value="28"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="thirdButton:" destination="slg-J6-YfO" eventType="touchUpInside" id="LMd-1M-IPa"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Tly-W4-jgS"/>
+                        <color key="backgroundColor" red="0.89803921568627454" green="0.89803921568627454" blue="0.89803921568627454" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="Tly-W4-jgS" firstAttribute="trailing" secondItem="k3t-H9-nQZ" secondAttribute="trailing" constant="23" id="9yc-e7-HIf"/>
+                            <constraint firstItem="XOj-Sy-CFe" firstAttribute="centerY" secondItem="I6D-1v-deA" secondAttribute="centerY" id="Rmb-O9-O3A"/>
+                            <constraint firstItem="I6D-1v-deA" firstAttribute="top" secondItem="Tly-W4-jgS" secondAttribute="top" constant="10" id="XUl-Ga-mlu"/>
+                            <constraint firstItem="XOj-Sy-CFe" firstAttribute="leading" secondItem="Tly-W4-jgS" secondAttribute="leading" constant="33" id="aMo-ZC-5jZ"/>
+                            <constraint firstItem="I6D-1v-deA" firstAttribute="centerX" secondItem="LJn-rO-xm2" secondAttribute="centerX" id="fxl-nd-dcm"/>
+                            <constraint firstItem="k3t-H9-nQZ" firstAttribute="leading" secondItem="Tly-W4-jgS" secondAttribute="leading" constant="24" id="oYa-A4-KWw"/>
+                            <constraint firstItem="Tly-W4-jgS" firstAttribute="bottom" secondItem="k3t-H9-nQZ" secondAttribute="bottom" constant="50" id="sGc-fX-8Yr"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="6gc-PD-aiX"/>
+                    <connections>
+                        <outlet property="firstButton" destination="H4f-kc-MF7" id="Wvl-mA-hgz"/>
+                        <outlet property="screenLabel" destination="I6D-1v-deA" id="NHx-Bx-5RQ"/>
+                        <outlet property="secondButton" destination="RhW-Pu-hOC" id="EXi-vo-px5"/>
+                        <outlet property="thirdButton" destination="tuY-zf-81f" id="ld1-LN-SVX"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fMl-T4-2D2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1461" y="9"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="N6e-RA-17D"/>
+    </inferredMetricsTieBreakers>
+    <resources>
+        <image name="chevron.left" catalog="system" width="96" height="128"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>
